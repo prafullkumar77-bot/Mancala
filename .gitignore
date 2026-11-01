@@ -1,0 +1,13 @@
+# Local build output, emulator captures, and signing material
+/build/
+*.keystore
+*.jks
+*.idsig
+
+# Machine-local files
+.DS_Store
+.idea/
+.vscode/
+local.properties
+__pycache__/
+*.pyc

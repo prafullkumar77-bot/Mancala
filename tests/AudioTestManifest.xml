@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.offline.mancala.audiotest"><uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35"/><application android:label="Mancala audio test"/><instrumentation android:name="com.offline.mancala.AudioInstrumentation" android:targetPackage="com.offline.mancala"/></manifest>
