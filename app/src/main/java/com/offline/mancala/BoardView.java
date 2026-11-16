@@ -24,7 +24,7 @@ public class BoardView extends View {
         c.save();Path clip=new Path();clip.addRoundRect(wood,38,38,Path.Direction.CW);c.clipPath(clip);
         Random rand=new Random(91);for(int i=0;i<180;i++){float y=47+i*2.15f;fill(i%3==0?0x24744823:0x18fff0bd);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(i%4==0?1.7f:.6f);Path grain=new Path();grain.moveTo(10,y);for(int x=10;x<1000;x+=80){float bend=(float)Math.sin(x*.009+i*.24)*5;grain.quadTo(x+40,y+bend+rand.nextFloat()*3,x+80,y+bend);}c.drawPath(grain,p);}c.restore();
         fill(0xffe5bc7b);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2);c.drawRoundRect(new RectF(21,54,979,425),32,32,p);
-        int[] counts=preview?new Game().pits:animating?shown:activity.game.pits;
+        int[] counts=preview?new Game(activity.startingPebbles()).pits:animating?shown:activity.game.pits;
         for(int i=0;i<14;i++){RectF r=holes[i];boolean store=i==6||i==13;boolean active=!preview&&!animating&&!activity.thinking&&!activity.game.over&&(activity.mode==2||activity.game.turn==0)&&activity.game.moves().contains(i);
             fill(0xff704020);c.drawOval(new RectF(r.left-3,r.top-3,r.right+3,r.bottom+3),p);
             p.setShader(new RadialGradient(r.centerX()+5,r.centerY()+20,store?150:74,new int[]{0xffa56b37,0xff784721,0xff3b2415},new float[]{0,.62f,1},Shader.TileMode.CLAMP));c.drawOval(r,p);p.setShader(null);

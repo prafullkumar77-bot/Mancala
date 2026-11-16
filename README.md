@@ -51,4 +51,4 @@ Phone UX refinement: removed the game footer, reduced game margins, applied visi
 
 The full-board phone layout was verified on the Small Phone emulator at its native 720 × 1280 resolution (320 dpi, landscape). UI smoke checks passed for the new coordinate mapping, extra turns, two-player handoff, saved-game resume, and Expert animated replies.
 
-Choose **Settings → Pebbles per pocket** to start new games with 1–8 pebbles in each pocket (default: 4). The choice is remembered; an existing saved game keeps its original count.
+Choose **Pebbles per pocket** on the home page to start new games with 1–8 pebbles in each pocket (default: 4). The choice is remembered; an existing saved game keeps its original count.
