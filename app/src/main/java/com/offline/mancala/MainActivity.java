@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
         picker.setWrapSelectorWheel(false);
         picker.setDescendantFocusability(android.view.ViewGroup.FOCUS_BLOCK_DESCENDANTS);
         picker.setContentDescription("Starting pebbles per pocket");
-        picker.setBackgroundColor(cream);
+        picker.setBackgroundColor(0xff201f19);
         d.body.addView(picker,new LinearLayout.LayoutParams(-1,dp(100)));
         d.action("Cancel",false,null);
         d.action("Save",true,()->{getPreferences(0).edit().putInt("startingPebbles",picker.getValue()).apply();home();});
