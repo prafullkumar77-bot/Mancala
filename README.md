@@ -50,3 +50,5 @@ Validation: rebuilt and signature-verified APK; engine tests passed; emulator ch
 Phone UX refinement: removed the game footer, reduced game margins, applied visible system-bar/cutout insets, corrected difficulty-card baseline alignment, reduced dialog typography, and enlarged pieces. The board now adapts to both available width and height; hit testing uses the same transforms.
 
 The full-board phone layout was verified on the Small Phone emulator at its native 720 × 1280 resolution (320 dpi, landscape). UI smoke checks passed for the new coordinate mapping, extra turns, two-player handoff, saved-game resume, and Expert animated replies.
+
+Choose **Settings → Pebbles per pocket** to start new games with 1–8 pebbles in each pocket (default: 4). The choice is remembered; an existing saved game keeps its original count.

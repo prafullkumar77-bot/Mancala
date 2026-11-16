@@ -8,8 +8,15 @@ public final class Game {
     public boolean over;
     public int captured;
     public boolean extra;
-    public Game() { Arrays.fill(pits,4); pits[6]=pits[13]=0; }
-    public Game copy() { Game g=new Game(); g.pits=pits.clone(); g.turn=turn; g.over=over; return g; }
+    public static final int DEFAULT_PEBBLES=4, MIN_PEBBLES=1, MAX_PEBBLES=8;
+    public final int startingPebbles;
+    public Game() { this(DEFAULT_PEBBLES); }
+    public Game(int pebbles) {
+        if(pebbles<MIN_PEBBLES || pebbles>MAX_PEBBLES) throw new IllegalArgumentException("Pebbles must be between 1 and 8");
+        startingPebbles=pebbles;
+        Arrays.fill(pits,pebbles); pits[6]=pits[13]=0;
+    }
+    public Game copy() { Game g=new Game(startingPebbles); g.pits=pits.clone(); g.turn=turn; g.over=over; return g; }
     public List<Integer> moves() {
         List<Integer> result=new ArrayList<>();
         if (!over) for(int i=turn*7;i<turn*7+6;i++) if(pits[i]>0) result.add(i);
